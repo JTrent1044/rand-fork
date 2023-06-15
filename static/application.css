@@ -1,0 +1,187 @@
+@import 'https://fonts.googleapis.com/css?family=Fira%20Code:400,500,700';
+
+body {
+	background: #002B36; /* Base 03 */
+	padding: 15px 50px 25px;
+	margin: 0px;
+}
+
+/* textarea */
+
+.main{
+    width: 100%;
+    height: 97%;
+    display: flex;
+}
+
+.text-main {
+    flex: 1;
+	border: 0px;
+	color: #93A1A1; /* Base 1 */
+	padding: 0px;
+	font-family: 'Fira Code',monospace;
+	outline: none;
+	resize: none;
+	font-size: 15px;
+	margin-top: 0;
+	margin-bottom: 0;
+    white-space: pre-wrap;
+}
+
+textarea {
+	background: transparent;
+	border: 0px;
+	padding: 0px;
+	outline: none;
+	resize: none;
+	font-size: 15px;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+::-webkit-scrollbar {
+	width: 15px;
+	height: 15px;
+}
+::-webkit-scrollbar-track-piece  {
+	background-color: #073642; /* Base 02 */
+}
+::-webkit-scrollbar-thumb:vertical {
+	height: 30px;
+	background-color: #586E75; /* Base 01 */
+}
+
+input[type=range]{
+    -webkit-appearance: none;
+    background: #002B36; /* Base 03 */
+    border: 1px solid #002B36; 
+    width: 300px;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 16px;
+    background: #073642; /* Base 02 */
+    border: none;
+    border-radius: 8px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    border: none;
+    border-radius: 50%;
+    background: #586E75; /* Base 01 */
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-thumb {
+    background: #657b83; /* Base 00 */
+}
+
+::-webkit-input-placeholder  { color:#586E75; } /* Base 01 */
+
+/* Light Mode */
+
+.light-mode {
+	background: #FDF6E3; /* Base 3 */
+}
+
+.light-mode text-main {
+	color: #586E75; /* Base 01 */
+}
+
+.light-mode ::-webkit-scrollbar-track-piece  {
+	background-color: #EEE8D5; /* Base 2 */
+}
+.light-mode ::-webkit-scrollbar-thumb:vertical {
+	height: 30px;
+	background-color: #93A1A1; /* Base 1 */
+}
+
+.light-mode input[type=range]{
+    -webkit-appearance: none;
+    background: #FDF6E3; /* Base 3 */
+    border: 1px solid #FDF6E3; 
+    width: 300px;
+}
+
+.light-mode input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 16px;
+    background: #EEE8D5; /* Base 2 */
+    border: none;
+    border-radius: 8px;
+}
+
+.light-mode input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    border: none;
+    border-radius: 50%;
+    background: #93A1A1; /* Base 1 */
+}
+
+.light-mode input[type=range]:focus {
+    outline: none;
+}
+
+.light-mode input[type=range]:focus::-webkit-slider-thumb {
+    background: #839496; /* Base 0 */
+}
+
+::-webkit-input-placeholder  { color:#93A1A1; } /* Base 1 */
+
+/*Fancy Button Graphics*/
+
+#light-mode-btn:before {
+	content: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2393A1A1" class="bi bi-moon-fill" viewBox="0 0 16 16"><path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/></svg>');
+	float: right;
+	padding-top: 2px;
+}
+
+.light-mode #light-mode-btn:before {
+	content: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23586E75" class="bi bi-brightness-high-fill" viewBox="0 0 16 16"><path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/></svg>');
+}
+
+#roll-btn:before {
+	content: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512" fill="%2393A1A1"><path d="M274.9 34.3c-28.1-28.1-73.7-28.1-101.8 0L34.3 173.1c-28.1 28.1-28.1 73.7 0 101.8L173.1 413.7c28.1 28.1 73.7 28.1 101.8 0L413.7 274.9c28.1-28.1 28.1-73.7 0-101.8L274.9 34.3zM200 224a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zM96 200a24 24 0 1 1 0 48 24 24 0 1 1 0-48zM224 376a24 24 0 1 1 0-48 24 24 0 1 1 0 48zM352 200a24 24 0 1 1 0 48 24 24 0 1 1 0-48zM224 120a24 24 0 1 1 0-48 24 24 0 1 1 0 48zm96 328c0 35.3 28.7 64 64 64H576c35.3 0 64-28.7 64-64V256c0-35.3-28.7-64-64-64H461.7c11.6 36 3.1 77-25.4 105.5L320 413.8V448zM480 328a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/></svg>');
+	float: right;
+	padding-top: 2px;
+}
+
+.light-mode #roll-btn:before {
+	content: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512" fill="%23586E75"><path d="M274.9 34.3c-28.1-28.1-73.7-28.1-101.8 0L34.3 173.1c-28.1 28.1-28.1 73.7 0 101.8L173.1 413.7c28.1 28.1 73.7 28.1 101.8 0L413.7 274.9c28.1-28.1 28.1-73.7 0-101.8L274.9 34.3zM200 224a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zM96 200a24 24 0 1 1 0 48 24 24 0 1 1 0-48zM224 376a24 24 0 1 1 0-48 24 24 0 1 1 0 48zM352 200a24 24 0 1 1 0 48 24 24 0 1 1 0-48zM224 120a24 24 0 1 1 0-48 24 24 0 1 1 0 48zm96 328c0 35.3 28.7 64 64 64H576c35.3 0 64-28.7 64-64V256c0-35.3-28.7-64-64-64H461.7c11.6 36 3.1 77-25.4 105.5L320 413.8V448zM480 328a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/></svg>');
+	float: right;
+	padding-top: 2px;
+}
+
+/* Firefox Compatability Zone */
+
+input[type=range]::-moz-range-track {
+    width: 300px;
+    height: 16px;
+    background: #073642; /* Base 02 */
+    border: none;
+    border-radius: 8px;
+}
+
+input[type=range]::-moz-range-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    border: none;
+    border-radius: 50%;
+    background: #586E75; /* Base 01 */
+}
+
+input[type=range]:focus::-moz-range-thumb {
+    background: #657b83; /* Base 00 */
+}
+
+::-moz-placeholder { color:#586e75; } /* Base 01 */

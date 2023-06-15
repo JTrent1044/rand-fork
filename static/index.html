@@ -1,0 +1,61 @@
+<html>
+
+	<head>
+
+		<title>randbin</title>
+        <meta charset="utf-8" />
+		<link rel="icon" href="favicon.svg">
+		<link rel="stylesheet" type="text/css" href="application.css"/>
+        <script src="https://randojs.com/1.0.0.js"></script>
+
+	</head>
+
+	<body>
+		<div class="main">
+			<textarea class="text-main" id="txt" spellcheck="false", placeholder="Enter one element on each line, and click the dice icon to generate a random subset of them. The slider controls the number of elements to output."></textarea>
+			<div id="choice-output" class="text-main"></div>
+        </div>
+		<input id="num-choices-slider" type='range' min='1' max='10' value='2' step='1' class="slider"/>
+		<a><i id="roll-btn"></i></a>
+		<a><i id="light-mode-btn"></i></a>
+	</body>
+
+	<script>
+		document.getElementById('light-mode-btn').addEventListener('click', function (e) {
+			const toggler = document.body;
+			toggler.classList.toggle('light-mode');
+			// const target = e.target;
+			// target.classList.toggle('fa-moon');
+			// target.classList.toggle('fa-sun');
+		});
+
+		var num_choices = 2;
+
+		document.getElementById("num-choices-slider").oninput = function(){
+			num_choices = parseInt(this.value);
+		}
+
+        document.getElementById("roll-btn").addEventListener('click', function (e) {
+			// var choices = document.getElementById("txt").value.split('\n');
+            // document.getElementById("choice-first").innerHTML = rando(choices).value;
+            // document.getElementById("choice-second").innerHTML = rando(choices).value;
+			
+			//randosequence to prevent repetition
+			var choices = randoSequence(document.getElementById("txt").value.split('\n'));
+
+			if (num_choices > choices.length) {
+				num_choices = choices.length;
+			}
+
+			var parsed = "";
+
+			for (i = 0; i < num_choices; i++) {
+				parsed += choices[i].value + "\n";
+			}
+            
+			document.getElementById("choice-output").innerHTML = parsed;
+
+		});
+	</script>
+
+</html>

@@ -135,7 +135,7 @@ input[type=range]:focus::-webkit-slider-thumb {
     background: #839496; /* Base 0 */
 }
 
-::-webkit-input-placeholder  { color:#93A1A1; } /* Base 1 */
+.light-mode ::-webkit-input-placeholder  { color:#93A1A1; } /* Base 1 */
 
 /*Fancy Button Graphics*/
 
